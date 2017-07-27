@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven {
+            url 'http://repo.enonic.com/public'
+        }
+    }
+
+    dependencies {
+        classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
+    }
+}
+
+apply plugin: 'com.enonic.xp.app'
+
+app {
+    name = 'Enonic Requestfilter'
+    displayName = 'Enonic Requestfilter'
+    vendorName = 'TINE SA'
+    vendorUrl = 'https://www.tine.no'
+}
+
+dependencies {
+    compile "com.enonic.xp:core-api:${xpVersion}"
+    compile "com.enonic.xp:portal-api:${xpVersion}"
+    compile "com.enonic.xp:web-api:6.11.0"
+    compile "com.enonic.xp:web-vhost:6.11.0"
+    include "com.enonic.xp:lib-content:${xpVersion}"
+    include "com.enonic.xp:lib-portal:${xpVersion}"
+    include "com.enonic.xp:lib-thymeleaf:${xpVersion}"
+    compile "javax.servlet:javax.servlet-api:3.0.1"
+    //include "com.enonic.xp:lib-xslt:${xpVersion}"
+    //include "com.enonic.xp:lib-mustache:${xpVersion}"
+    //include "com.enonic.xp:lib-i18n:${xpVersion}"
+    //include "com.enonic.xp:lib-auth:${xpVersion}"
+    //include "com.enonic.xp:lib-cache:${xpVersion}"
+    //include "com.enonic.xp:lib-context:${xpVersion}"
+    //include "com.enonic.xp:lib-http-client:${xpVersion}"
+    //include "com.enonic.xp:lib-io:${xpVersion}"
+    //include "com.enonic.xp:lib-mail:${xpVersion}"
+    //include "com.enonic.xp:lib-repo:${xpVersion}"
+    //include "com.enonic.xp:lib-websocket:${xpVersion}"
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    maven {
+        url 'http://repo.enonic.com/public'
+    }
+}
