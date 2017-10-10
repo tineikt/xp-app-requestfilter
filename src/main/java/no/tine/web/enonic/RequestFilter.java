@@ -41,9 +41,10 @@ public final class RequestFilter extends OncePerRequestFilter {
         String host = getHost(req);
         String time = getTimeDifferenceInSec(start, stop);
         String url = req.getPathInfo() + "" + parameters;
-
+        int statusCode = res.getStatus();
+     
         if (shouldBeDisplayed(url)) {
-            logger.info("T[" + time + "] S[" + sessionId + "] I[" + ip + "] H[" + host + "]  M[" + req.getMethod() + "] R[" + url + "]");
+            logger.info("T[" + time + "] S[" + sessionId + "] I[" + ip + "] H[" + host + "] C[" + statusCode + "] M[" + req.getMethod() + "] R[" + url + "]");
         }
     }
 
