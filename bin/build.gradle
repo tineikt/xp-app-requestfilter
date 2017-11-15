@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'com.enonic.xp.app' version '1.0.13'
+    id 'com.enonic.xp.app' version '1.0.11'
 }
 
 xp {
@@ -8,7 +8,7 @@ xp {
 }
 
 app {
-    name = 'EnonicRequestfilter'
+    name = 'Enonic Requestfilter'
     displayName = 'Enonic Requestfilter'
     vendorName = 'TINE SA'
     vendorUrl = 'https://www.tine.no'
