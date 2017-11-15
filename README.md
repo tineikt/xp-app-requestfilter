@@ -24,5 +24,6 @@ T[0.125] S[] I[10.0.0.1] H[www.mysite.no] C[200] M[GET] R[/news/random?param=123
 ```
 
 # Todo: 
+- Mask passwords in parameters
 - Handle exceptions and still get the log output. Otherwise the chain will just terminate and not log anything
 - Add support for json input data. Now it only handles simple url/post parameters
