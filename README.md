@@ -1,4 +1,4 @@
-# Xp-app-requestfilter
+# About Request Filter 
 Simple Request Filter for Enonic XP that prints every request to the server log. Very useful for looking at your traffic in real time and debugging issues
 
 # Output
