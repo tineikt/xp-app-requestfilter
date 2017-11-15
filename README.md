@@ -16,6 +16,7 @@ M = What method was used (GET, POST etc)
 
 R = What was the request including simple parameters
 
+!! The filter will not process requests that are related to resources or anything related to /admin !!
 
 # Example
 ```
