@@ -6,3 +6,7 @@
 /build/
 /classes
 .iml
+/bin
+/.vscode
+.enonic
+/.settings
