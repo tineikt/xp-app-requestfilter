@@ -1,10 +1,10 @@
 package no.tine.web.enonic;
 
-import com.enonic.xp.annotation.Order;
-import com.enonic.xp.web.filter.OncePerRequestFilter;
-import org.osgi.service.component.annotations.Component;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -12,11 +12,13 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
+import com.enonic.xp.annotation.Order;
+import com.enonic.xp.web.filter.OncePerRequestFilter;
+
+import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Component(immediate = true, service = Filter.class)
 @Order(-1000)
@@ -67,7 +69,7 @@ public final class RequestFilter extends OncePerRequestFilter {
     private String getRequestParameters(HttpServletRequest request) {
         String parameters = "";
 
-        Enumeration en = request.getParameterNames();
+        Enumeration<String> en = request.getParameterNames();
 
         int count = 0;
 
