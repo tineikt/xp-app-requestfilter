@@ -169,7 +169,7 @@ public final class RequestFilter extends OncePerRequestFilter {
         patterns.add(Pattern.compile(".*/admin/.*"));
     }
 
-    private String getRequestBody(ContentCachingRequestWrapper wrappedRequest) {
+    String getRequestBody(ContentCachingRequestWrapper wrappedRequest) {
         byte[] contentAsByteArray = wrappedRequest.getContentAsByteArray();
         if (contentAsByteArray.length > 0) {
             String characterEncoding = wrappedRequest.getCharacterEncoding();
